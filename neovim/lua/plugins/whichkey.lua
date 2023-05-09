@@ -16,12 +16,17 @@ return {
             ["<leader>t"] = { nvimTreeApi.tree.toggle, "Toggle file explorer" },
             {
                 name = "Language Server",
-                ["<leader>f"] = { vim.lsp.buf.format, "Format buffer" },
-                ["<leader>gd"] = { vim.lsp.buf.definition, "Go to declaration" },
-                ["<leader>gD"] = { vim.lsp.buf.definition, "Go to definition" },
-                ["<leader>k"] = { vim.lsp.buf.hover, "Hover" }
+                ["<space>f"] = { vim.lsp.buf.format, "Format buffer" },
+                ["gd"] = { vim.lsp.buf.definition, "Go to definition" },
+                ["gD"] = { vim.lsp.buf.declaration, "Go to declaration" },
+                ["gr"] = { vim.lsp.buf.references, "References" },
+                ["gi"] = { vim.lsp.buf.implementation, "Implementation" },
+                ["<space>rn"] = { vim.lsp.buf.rename, "Rename" },
+                ["<space>ca"] = { vim.lsp.buf.code_action, "Code action" },
+                ["<space>cl"] = { vim.lsp.codelens.run, "Code lens" },
+                ["K"] = { vim.lsp.buf.hover, "Hover" }
             },
-            ["<leader>lg"] = { "<cmd>LazyGit<cr>", "Open LazyGit" },
+            ["<leader>gl"] = { "<cmd>LazyGit<cr>", "Open LazyGit" },
         }
         wk.register(mappings)
     end,
