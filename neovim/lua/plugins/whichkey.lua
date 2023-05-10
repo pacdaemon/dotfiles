@@ -12,6 +12,7 @@ return {
                 }
             }
         })
+        local telescope = require("telescope.builtin")
         local mappings = {
             ["<leader>t"] = { nvimTreeApi.tree.toggle, "Toggle file explorer" },
             {
@@ -26,7 +27,9 @@ return {
                 ["<space>cl"] = { vim.lsp.codelens.run, "Code lens" },
                 ["K"] = { vim.lsp.buf.hover, "Hover" }
             },
-            ["<leader>gl"] = { "<cmd>LazyGit<cr>", "Open LazyGit" },
+            ["<space>gl"] = { "<cmd>LazyGit<cr>", "Open LazyGit" },
+            ["<space>ff"] = { telescope.find_files, "Find files" },
+            ["<space>fg"] = { telescope.live_grep, "Live grep" },
         }
         wk.register(mappings)
     end,
