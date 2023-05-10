@@ -25,7 +25,8 @@ return {
                 ["<space>rn"] = { vim.lsp.buf.rename, "Rename" },
                 ["<space>ca"] = { vim.lsp.buf.code_action, "Code action" },
                 ["<space>cl"] = { vim.lsp.codelens.run, "Code lens" },
-                ["K"] = { vim.lsp.buf.hover, "Hover" }
+                ["K"] = { vim.lsp.buf.hover, "Hover" },
+                ["<space>clr"] = { vim.lsp.codelens.refresh, "Code lens refresh" },
             },
             ["<space>gl"] = { "<cmd>LazyGit<cr>", "Open LazyGit" },
             ["<space>ff"] = { telescope.find_files, "Find files" },
@@ -33,5 +34,5 @@ return {
         }
         wk.register(mappings)
     end,
-    dependencies = { { "nvim-tree/nvim-tree.lua" } }
+    dependencies = { { "nvim-tree/nvim-tree.lua" }, { "simrat39/rust-tools.nvim" } }
 }
