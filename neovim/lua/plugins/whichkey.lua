@@ -26,6 +26,7 @@ return {
                 ["K"] = { '<cmd>lua vim.lsp.buf.hover()<cr>', "Hover" },
                 ["<space>clr"] = { '<cmd>lua vim.lsp.codelens.refresh()<cr>', "Code lens refresh" },
                 ["<space>aa"] = { '<cmd>lua vim.diagnostic.setqflist()<cr>', "Show all code diagnostics" },
+                ["<space>oi"] = { '<cmd>MetalsOrganizeImports<cr>', "Organize imports" }
             },
             {
                 name = "Debugger",
