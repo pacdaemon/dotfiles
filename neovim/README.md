@@ -1,4 +1,4 @@
-# Dotfiles
+# Neovim ini files
 
 ## Pre-requisites scala development
 * Coursier
