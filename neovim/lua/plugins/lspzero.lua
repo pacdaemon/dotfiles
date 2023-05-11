@@ -6,7 +6,7 @@ return {
         -- LSP Support
         { 'neovim/nvim-lspconfig' }, -- Required
         {
-                               -- Optional
+            -- Optional
             'williamboman/mason.nvim',
             build = function()
                 pcall(vim.cmd, 'MasonUpdate')
@@ -19,15 +19,13 @@ return {
         { 'hrsh7th/cmp-vsnip' },
         { 'hrsh7th/vim-vsnip' },
         { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-        { 'L3MON4D3/LuaSnip' }, -- Required
+        { 'L3MON4D3/LuaSnip' },     -- Required
     },
     config = function()
         local lsp = require('lsp-zero').preset({})
         lsp.on_attach(function(client, bufnr)
             lsp.default_keymaps({ buffer = bufnr })
         end)
-
-        require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
         lsp.preset({
             name = 'minimal',
@@ -36,7 +34,6 @@ return {
             suggest_lsp_servers = true,
         })
         lsp.nvim_workspace()
-        lsp.setup()
 
         local cmp = require("cmp")
         cmp.setup({
@@ -73,5 +70,7 @@ return {
                 end,
             }),
         })
+
+        lsp.setup()
     end,
 }
