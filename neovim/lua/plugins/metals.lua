@@ -10,6 +10,7 @@ return {
 
         metals_config.settings = {
             showImplicitArguments = true,
+            showImplicitConversionsAndClasses = true,
             excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
         }
 
@@ -22,7 +23,7 @@ return {
             -- NOTE: You may or may not want java included here. You will need it if you
             -- want basic Java support but it may also conflict if you are using
             -- something like nvim-jdtls which also works on a java filetype autocmd.
-            pattern = { "scala", "sbt", "java", "worksheet.sc" },
+            pattern = { "scala", "sbt", "java", "worksheet.sc", "sc" },
             callback = function()
                 require("metals").initialize_or_attach(metals_config)
             end,
