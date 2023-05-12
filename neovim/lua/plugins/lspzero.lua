@@ -40,6 +40,7 @@ return {
             sources = {
                 { name = "nvim_lsp" },
                 { name = "vsnip" },
+                { nane = "git" },
             },
             snippet = {
                 expand = function(args)
