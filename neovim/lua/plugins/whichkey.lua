@@ -26,7 +26,11 @@ return {
                 ["K"] = { '<cmd>lua vim.lsp.buf.hover()<cr>', "Hover" },
                 ["<space>clr"] = { '<cmd>lua vim.lsp.codelens.refresh()<cr>', "Code lens refresh" },
                 ["<space>aa"] = { '<cmd>lua vim.diagnostic.setqflist()<cr>', "Show all code diagnostics" },
-                ["<space>oi"] = { '<cmd>MetalsOrganizeImports<cr>', "Organize imports" }
+                ["<space>oi"] = { '<cmd>MetalsOrganizeImports<cr>', "Organize imports" },
+                ["<space>ws"] = { '<cmd>lua vim.lsp.workspace.symbol()<cr>', "Workspace symbols" },
+                ["<space>mc"] = { '<cmd>lua require("telescope").extensions.metals.commands()<cr>', "Metals Commands" },
+                ["<space>sh"] = { '<cmd>lua vim.lsp.buf.signature_help()<cr>', "Signature help" },
+                ["<space>ds"] = { '<cmd>lua vim.lsp.buf.document_symbol()<cr>', "Document Symbols" },
             },
             {
                 name = "Debugger",
