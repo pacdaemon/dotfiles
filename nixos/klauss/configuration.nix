@@ -70,7 +70,7 @@
   	users.pac = {
   		isNormalUser = true;
 		description = "Pablo Cavallo";
-  		extraGroups = [ "wheel" "networkmanager" ];
+  		extraGroups = [ "wheel" "networkmanager" "docker"];
 		shell = pkgs.zsh;
 	};
   };
