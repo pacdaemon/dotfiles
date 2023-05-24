@@ -92,6 +92,20 @@
       etcher
       firefox
     ];
+    createHome = true;
+  };
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.magdalena = {
+    shell = pkgs.zsh;
+    isNormalUser = true;
+    description = "Magdalena Alvarez";
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    packages = with pkgs; [
+      etcher
+      firefox
+    ];
+    createHome = true;
   };
 
   # Allow unfree packages
@@ -129,7 +143,16 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
+
+  services.avahi = {
+  	enable = true;
+	nssmdns = true;
+	publish = {
+		enable = true;
+		addresses = true;
+	};
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
