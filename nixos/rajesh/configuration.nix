@@ -104,6 +104,7 @@
     packages = with pkgs; [
       etcher
       firefox
+      google-chrome
     ];
     createHome = true;
   };
@@ -118,7 +119,12 @@
   	htop
 	localstack
 	terraform
+	vscode
 	wezterm
+	zoom-us
+	skypeforlinux
+	_1password-gui
+	google-cloud-sdk
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
